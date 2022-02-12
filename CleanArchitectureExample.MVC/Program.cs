@@ -1,4 +1,5 @@
 using CleanArchitecture.Infra.Data.Context;
+using CleanArchitecture.Infra.IoC;
 using CleanArchitectureExample.MVC.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.RegisterServices(); // this is for config services writen in dependancy container 
 
 var app = builder.Build();
 
@@ -51,3 +54,12 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+
+// we should create a extension method to call this fuction. In dot net core 6 we have only program.cs. therfore all startup will execute with program.cs 
+public static class ServiceExtensions
+{
+    public static void RegisterServices(this IServiceCollection services)
+    {
+        DependancyContainer.RegisterServices(services);
+    }
+}
