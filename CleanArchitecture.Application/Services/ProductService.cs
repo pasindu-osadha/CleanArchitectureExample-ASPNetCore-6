@@ -19,7 +19,7 @@ namespace CleanArchitecture.Application.Services
         }
         public ProductViewModel GetAllProduts()
         {
-            throw new NotImplementedException();
+            return new ProductViewModel() { Products = _productRepository.GetAllProducts() };
         }
     }
 }
