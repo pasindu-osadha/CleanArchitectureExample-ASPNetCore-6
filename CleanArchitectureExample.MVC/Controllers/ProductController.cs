@@ -1,5 +1,6 @@
 ﻿using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectureExample.MVC.Controllers
@@ -11,6 +12,7 @@ namespace CleanArchitectureExample.MVC.Controllers
         {
             _productService=productService;
         }
+        [Authorize]
         public IActionResult Index()
         {
             ProductViewModel model = _productService.GetAllProduts();
