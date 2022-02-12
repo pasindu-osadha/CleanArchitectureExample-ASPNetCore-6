@@ -3,6 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchitectureExample.Application", "CleanArchitectureExample.Application", "{7CEDBFA3-3B54-4CAA-A5D2-F1A14B565245}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchitectureExample.Domain", "CleanArchitectureExample.Domain", "{190F6F5D-8126-4614-B2AE-A694EBC12977}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchitectureExample.Infrastructure.Data", "CleanArchitectureExample.Infrastructure.Data", "{258EDE26-1321-40B7-B03E-99BCFA110D60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchitectureExample.Infrastructure.IoC", "CleanArchitectureExample.Infrastructure.IoC", "{A93AAA1D-5A9B-4347-B4BE-A284195A8C1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchitectureExample.UI.MVC", "CleanArchitectureExample.UI.MVC", "{81DC039A-33BE-4DBD-842B-F8A67FB0F80E}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
